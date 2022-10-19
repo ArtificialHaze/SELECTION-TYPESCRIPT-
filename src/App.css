@@ -1,0 +1,129 @@
+/* GLOBAL STYLE */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* MAIN STYLE */
+
+.container {
+  position: relative;
+  top: 3rem;
+  left: 3rem;
+  width: 20em;
+  min-height: 1.5em;
+  border: 0.05em solid #777;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.5em;
+  border-radius: 0.25em;
+  outline: none;
+}
+
+.container:focus {
+  border-color: hsl(200, 100%, 50%);
+}
+
+.value {
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
+.clear-btn {
+  background: none;
+  color: #777;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 1.25em;
+  transition: all 150ms ease-in;
+}
+
+.clear-btn:focus,
+.clear-btn:hover {
+  color: #333;
+}
+
+.divider {
+  background-color: #777;
+  align-self: stretch;
+  width: 0.05em;
+}
+
+.caret {
+  border: 0.25em solid transparent;
+  border-top-color: #777;
+  translate: 0 25%;
+}
+
+.options {
+  margin: 0;
+  padding: 0;
+  top: 3rem;
+  list-style: none;
+  display: none;
+  max-height: 15em;
+  overflow-y: auto;
+  border: 0.05em solid #777;
+  border-radius: 0.25em;
+  width: 100%;
+  left: 0;
+  top: calc(100%+0.25em);
+  position: absolute;
+  background-color: #fff;
+  z-index: 99;
+}
+
+.options.show {
+  display: block;
+}
+
+.option {
+  padding: 0.25em 0.5em;
+  cursor: pointer;
+}
+
+.option.selected {
+  background-color: hsl(200, 100%, 70%);
+}
+
+.option.highlighted {
+  background-color: hsl(200, 100%, 50%);
+  color: #fff;
+}
+
+.option-badge {
+  display: flex;
+  align-items: center;
+  border: 0.05em solid #777;
+  border-radius: 0.25em;
+  padding: 0.15em 0.25em;
+  gap: 0.25em;
+  cursor: pointer;
+  background: none;
+  outline: none;
+}
+
+.option-badge:hover,
+.option-badge:focus {
+  background-color: hsl(0, 100%, 90%);
+  border-color: hsl(0, 100%, 50%);
+}
+
+.option-badge:hover > .remove-btn,
+.option-badge:focus > .remove-btn {
+  color: hsl(0, 100%, 50%);
+}
+
+.option-badge > .remove-btn {
+  font-size: 1.25em;
+  color: #777;
+}
+
+/* RESPONSIVE */
